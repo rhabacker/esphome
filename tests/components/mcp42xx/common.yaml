@@ -1,0 +1,19 @@
+spi:
+  - id: spi_mcp42xx
+    clk_pin: ${clk_pin}
+    mosi_pin: ${mosi_pin}
+    miso_pin: ${miso_pin}
+
+mcp42xx:
+  - id: mcp42xx_chip
+    cs_pin: ${cs_pin}
+
+output:
+  - platform: mcp42xx
+    id: pot_1
+    mcp42xx_id: mcp42xx_chip
+    channel: A
+  - platform: mcp42xx
+    id: pot_2
+    mcp42xx_id: mcp42xx_chip
+    channel: B
